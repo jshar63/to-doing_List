@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head><title>To-Doing List</title></head>
+<body style="font-family:Georgia, 'Times New Roman', Times, serif;background-color:goldenrod"align=center>
+	<h1 style="background-color:gold;color:lemonchiffon;">
+        <?php
+
+            if (isset($_REQUEST['usename'])){
+	            $usename = $_REQUEST['usename'];
+            }
+            if (isset($_REQUEST['name'])){
+	            $name = $_REQUEST['name'];
+            }
+            if (isset($_REQUEST['data'])){
+	            $data = $_REQUEST['data'];
+            }
+            echo "Successfully added item \"$data\" to your list \"$name\"";
+        ?>
+    </h1>
+    <h2>Would You like to add another item to the list?</h2>
+    <form action="index.html">
+        <input type="submit" value="Yes"/>
+    </form>
+    
+    <form action="index.html">
+        <input type="submit" value="No"/>
+    </form>
+
+</body>
+</html>
